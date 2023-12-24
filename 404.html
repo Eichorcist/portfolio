@@ -1,0 +1,136 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(217, 22%, 12%);
+      font-family: "poppins";
+      padding: 200px;
+    }
+    .cookie-card {
+      margin-bottom: auto;
+      display: block;
+      position: absolute;
+      max-width: 320px;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+    }
+    
+    .title {
+      font-weight: 600;
+      color: rgb(31 41 55);
+    }
+    
+    .description {
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      color: rgb(75 85 99);
+    }
+    
+    .description a {
+      --tw-text-opacity: 1;
+      color: rgb(59 130 246);
+    }
+    
+    .description a:hover {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
+    }
+    
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      -moz-column-gap: 1rem;
+      column-gap: 1rem;
+      flex-shrink: 0;
+    }
+    
+    .pref {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      color: rgb(31 41 55 );
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      background-color: transparent;
+    }
+
+    .pref:hover {
+      color: rgb(0, 0, 0);
+    }
+    
+    .pref:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    
+    .accept {
+      font-size: 0.75rem;
+      line-height: 1rem;
+      background-color: rgb(17 24 39);
+      font-weight: 500;
+      border-radius: 0.5rem;
+      color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      border: none;
+      transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .accept:hover {
+      background-color: #fac921;
+      color: black;
+    }
+    
+    .accept:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cookie-card">
+    <span class="title">⛔ You do not have acces!</span>
+    <p class="description">Please check authentication on the previous page and input credentials to acces this page.</p>
+    <div class="actions">
+        <a id="redirectInfo" class="pref">
+        </a>
+        <button onclick="back()" class="accept">
+            Okay
+        </button>
+    </div>
+</div>
+  <script>
+    function back() {
+      window.history.back();
+    } 
+    function redirectToPreviousPage(countdown) {
+      var redirectInfo = document.getElementById('redirectInfo');
+      redirectInfo.textContent = 'Automatically returns in ' + countdown + ' secodns';
+      if (countdown > 0) {
+        setTimeout(function() {
+          redirectToPreviousPage(countdown - 1);
+        }, 1000);
+      } else {
+        setTimeout(function() {
+          window.history.back();
+        }, 10);
+      }
+    }
+    redirectToPreviousPage(5);
+  </script>
+</body>
+</html>
