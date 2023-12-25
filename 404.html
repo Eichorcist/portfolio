@@ -6,21 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 Page Not Found</title>
   <style>
+     @font-face {
+   font-family: "Mona Sans";
+   src: url("/font/mona-sans-d1bf285e9b9b.woff2")
+       format("woff2 supports variations"),
+     url("/font/mona-sans-d1bf285e9b9b.woff2") format("woff2-variations");
+   font-weight: 200 900;
+   font-stretch: 75% 125%;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: "Hubot Sans";
+   src: url("/font/hubot-sans-752ab2a135fb.woff2")
+       format("woff2 supports variations"),
+     url("/font/hubot-sans-752ab2a135fb.woff2") format("woff2-variations");
+   font-weight: 200 900;
+   font-stretch: 75% 125%;
+   font-display: swap;
+ }
     body {
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: hsl(217, 22%, 12%);
-      font-family: "poppins";
-      padding: 200px;
+      background-color: hsl(0, 0%, 0%);
+      font-family: "mona sans";
     }
     .cookie-card {
       margin-bottom: auto;
       display: block;
-      position: absolute;
       max-width: 320px;
       padding: 1rem;
-      background-color: #fff;
+      background-color: #e7e7e7;
       border-radius: 10px;
       box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
     }
@@ -91,8 +107,7 @@
     }
     
     .accept:hover {
-      background-color: #fac921;
-      color: black;
+      background-color: #323232;
     }
     
     .accept:focus {
@@ -100,26 +115,51 @@
       outline-offset: 2px;
     }
   </style>
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/dark.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/dasboard.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/discussion.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/github.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/globalclone.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/home.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/light.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/primer-primitives.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/primer.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="lib/css/site.css">
 </head>
-<body>
-  <div class="cookie-card">
-    <span class="title">⛔ You do not have acces!</span>
-    <p class="description">Please check authentication on the previous page and input credentials to acces this page.</p>
-    <div class="actions">
-        <a id="redirectInfo" class="pref">
-        </a>
-        <button onclick="back()" class="accept">
-            Okay
-        </button>
-    </div>
+<body data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
+
+
+  
+
+<div style="align-self: center; justify-content: center; padding:200px;">
+  <div class="d-flex position-relative z-1" data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
+    <card-skew class="overflow-hidden rounded-3 mb-3 mb-md-5" data-catalyst="" data-perspective="700" style="transform: perspective(700px) rotateX(0.03deg) rotateY(0.03deg);">
+      <div class="feature-card-mktg d-md-flex rounded-3 color-bg-subtle border position-relative flex-justify-between z-1 height-full flex-row" data-target="card-skew.bounding">
+        <div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-4 pl-lg-8 pr-lg-12 col-md-6 flex-justify-between">
+          <p class="f2-mktg text-medium color-fg-muted mb-4" style="min-width: 205px;">
+            <em>You do not have access!</em> <br>Please check authentication on the previous page and input credentials to access this page.
+          </p>
+          <div>
+            <a id="redirectInfo" class="link-mktg text-semibold color-fg-default py-1 f3-mktg" style="font-size: 2px;" onclick="back()"> Back to homepage 
+            </a>
+          </div>
+        </div>
+        <div data-target="card-skew.shine" class="position-absolute bottom-0 right-0 events-none z-n1" style="transform: translate(-811.41px, 156.94px);"></div>
+      </div>
+    </card-skew>
+  </div>
 </div>
   <script>
     function back() {
       window.history.back();
     } 
     function redirectToPreviousPage(countdown) {
+      var svg = `<svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
+                <path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>`;
       var redirectInfo = document.getElementById('redirectInfo');
-      redirectInfo.textContent = 'Automatically returns in ' + countdown + ' secodns';
+      redirectInfo.innerHTML = 'Automatically returns in ' + countdown + ' seconds' + svg;
       if (countdown > 0) {
         setTimeout(function() {
           redirectToPreviousPage(countdown - 1);
@@ -130,7 +170,7 @@
         }, 10);
       }
     }
-    redirectToPreviousPage(5);
+    redirectToPreviousPage(10);
   </script>
 </body>
 </html>
