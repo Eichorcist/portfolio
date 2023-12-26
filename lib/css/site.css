@@ -2541,7 +2541,7 @@
    color: var(--fgColor-default, var(--color-fg-default));
  }
  .feature-card-mktg .color-fg-muted {
-   color: rgba(235, 245, 255, 0.5) !important;
+   color: #656d76 !important;
  }
  .arrow-target-mktg .octicon {
    width: auto;

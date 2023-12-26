@@ -839,20 +839,15 @@
       }
     </style>
   </head>
-  <body class="logged-out env-production page-responsive header-overlay home-campaign intent-mouse" style="word-wrap: break-word;">
-    <div data-turbo-body="" class="logged-out env-production page-responsive header-overlay home-campaign" style="word-wrap: break-word;">
-      <div class="position-relative js-header-wrapper ">
-        <a href="#start-of-content" class="px-2 py-4 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus js-skip-to-content">Skip to content</a>
-        <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
-          <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
-        </span>
-        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-3" role="banner" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+  <body class="logged-out env-production page-responsive header-overlay home-campaign intent-mouse" style="word-wrap: break-word;" >
+    <div data-turbo-body="" class="logged-out env-production page-responsive header-overlay home-campaign" style="word-wrap: break-word;" data-color-mode="light" data-dark-theme="dark" data-light-theme="dark">
+      <div class="position-relative">
+        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-3" role="banner">
           <div class=" d-flex flex-column flex-lg-row flex-items-center p-responsive height-full position-relative z-1">
             <div class="d-flex flex-justify-between flex-items-center width-full width-lg-auto">
-              <a class="mr-lg-3 color-fg-inherit flex-order-2" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark"></a>
               <div class="flex-1 flex-order-2 text-right">
-                <button aria-label="Toggle navigation" aria-expanded="false" type="button" data-view-component="true" class="js-details-target Button--link Button--medium Button d-lg-none color-fg-inherit p-1">
-                  <span class="Button-content">
+                <button aria-expanded="false" type="button" data-view-component="true" class="js-details-target Button--link Button--medium Button d-lg-none color-fg-default p-1">
+                  <span class="Button-content"> 
                     <span class="Button-label">
                       <div class="HeaderMenu-toggle-bar rounded my-1"></div>
                       <div class="HeaderMenu-toggle-bar rounded my-1"></div>
@@ -995,6 +990,7 @@
                         </svg>
                       </button>
                       <div class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 py-2 py-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 px-lg-4">
+                        <div class="border-bottom pb-3 mb-3">
                         <span class="d-block h4 color-fg-default my-1" id="solutions-for-heading">Web Language</span>
                         <ul class="list-style-none f5" aria-labelledby="solutions-for-heading">
                           <li>
@@ -1002,6 +998,16 @@
                           </li>
                           <li>
                             <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" href="index-id.html"> Indonesia </a>
+                          </li>
+                        </ul>
+                        </div>
+                        <span class="d-block h4 color-fg-default my-1" id="solutions-for-heading">Web Theme</span>
+                        <ul class="list-style-none f5" aria-labelledby="solutions-for-heading">
+                          <li>
+                            <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" onclick="switchColor('dark')" style="cursor: pointer;"> Dark </a>
+                          </li>
+                          <li>
+                            <a class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary" onclick="switchColor('light')" style="cursor: pointer;"> Light </a>
                           </li>
                         </ul>
                       </div>
@@ -1021,10 +1027,6 @@
       <div class="application-main " data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="">
         <main class="font-mktg">
           <div class="overflow-hidden" data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
-            <div class="container-xl position-relative">
-              <img alt="" aria-hidden="true" width="2236" height="1630" class="position-absolute top-0 height-auto events-none d-none d-sm-block" style="width: min(1118px, max(100vh, 100vw)); left: 67%;" src="https://github.githubassets.com/assets/hero-desktop-a38b0fd77b6c.webp">
-              <img alt="" aria-hidden="true" width="860" height="544" class="events-none d-sm-none width-full height-auto mb-n3" src="https://github.githubassets.com/assets/hero-mobile-7163f4f5de41.webp">
-            </div>
             <div class="px-3 home-campaign-hero">
               <div class="position-relative pt-3 pt-sm-8 pt-lg-12 container-xl js-build-in-trigger build-in-animate" data-hpc="">
                 <div class="d-flex pt-sm-9">
@@ -1043,7 +1045,7 @@
                     </div>
                     <div style="height: 110px; background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);" class="home-campaign-git-line rounded mx-auto"></div>
                   </div>
-                  <div class="col-11 text-left pl-2 pl-sm-0 mt-n4">
+                  <div class="col-11 text-left pl-2 pl-sm-0 mt-4">
                     <div class="position-relative z-1 mb-2 mb-sm-6"></div>
                     <h1 class="h0-mktg mb-2 position-relative z-2">
                       <span style="font-size: 1.2em">I'm Zaeni Ahmad</span>
@@ -1147,7 +1149,7 @@
                       <div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 col-md-6 flex-justify-between">
                         <p class="f2-mktg text-medium color-fg-muted mb-4">
                           <em>UI Designer at Microsoft.</em> <br>I worked at Microsoft for three years as a ui designer.
-                        </p>
+                        </p> 
                         <div>
                           <a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" href="needaccess.html" data-analytics-event="{&quot;category&quot;:&quot;Discover GitHub Actions&quot;,&quot;action&quot;:&quot;click to Discover GitHub Actions&quot;,&quot;label&quot;:&quot;ref_cta:Discover GitHub Actions;&quot;}"> Read Report <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                               <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
@@ -1174,7 +1176,7 @@
                         <div class="d-md-flex flex-column flex-1 p-5 p-sm-6 py-lg-8 pl-lg-8 pr-lg-12 flex-justify-start">
                           <p class="f2-mktg text-medium color-fg-muted mb-4">
                             <em>Frontend Developer at Google.</em> <br>I have complete a job in Google as a frontend developer to create a google firebase.
-                          </p>
+                          </p> 
                           <div>
                             <a class="link-mktg text-semibold color-fg-default py-1 f3-mktg" href="needaccess.html" data-analytics-event="{&quot;category&quot;:&quot;Check out GitHub Codespaces&quot;,&quot;action&quot;:&quot;click to Check out GitHub Codespaces&quot;,&quot;label&quot;:&quot;ref_cta:Check out GitHub Codespaces;&quot;}"> Read Report <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
@@ -1256,7 +1258,7 @@
                   </div>
                   <div class="position-relative d-flex flex-column flex-md-row gutter-spacious col-lg-10 mx-auto my-lg-6">
                     <div class="col-md-6 js-build-in-item build-in-scale-right" style="transition-delay: 0ms;">
-                      <div class="p-4 rounded mt-5 box-shadow-mktg-xl mb-6" style="background: rgba(235, 245, 255, 0.2);">
+                      <div class="p-4 rounded mt-5 box-shadow-mktg-xl mb-6" style="background: rgba(135, 135, 135, 0.2);">
                         <ul class="list-style-none mb-n4">
                           <li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade" style="transition-delay: 200ms;">
                             <div class="d-flex flex-items-center">
@@ -1271,13 +1273,13 @@
                       </div>
                     </div>
                     <div class="home-campaign-ghas-connect position-relative position-md-absolute z-1 d-flex flex-items-center js-build-in-item build-in-scale-fade" style="transition-delay: 400ms;">
-                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;"></div>
-                      <div style="width: 40px; height: 2px; background: #D1D5DA;"></div>
-                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;"></div>
+                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px grey"></div>
+                      <div style="width: 40px; height: 2px; background: grey"></div>
+                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px grey"></div>
                     </div>
                     <div class="col-md-6 js-build-in-item build-in-scale-right" style="transition-delay: 600ms;">
-                      <div class="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" style="background: rgba(235, 245, 255, 0.2);"> Web Development </div>
-                      <div class="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6" style="background: rgba(235, 245, 255, 0.2);">
+                      <div class="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" style="background: rgba(135, 135, 135, 0.2);"> Web Development </div>
+                      <div class="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6" style="background: rgba(135, 135, 135, 0.2);">
                         <ul class="list-style-none mb-n4">
                           <li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade" style="transition-delay: 800ms;">
                             <div class="d-flex flex-items-center">
@@ -1310,13 +1312,13 @@
                       </div>
                     </div>
                     <div class="home-campaign-ghas-connect2 position-relative position-md-absolute z-1 d-flex flex-items-center js-build-in-item build-in-scale-fade" style="transition-delay: 1400ms;">
-                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;"></div>
-                      <div style="width: 40px; height: 2px; background: #D1D5DA;"></div>
-                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px #444D56;"></div>
+                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px grey"></div>
+                      <div style="width: 40px; height: 2px; background: grey"></div>
+                      <div class="d-inline-block circle p-1 color-bg-emphasis" style="box-shadow: 0 0 0 2px grey"></div>
                     </div>
                     <div class="col-md-6 js-build-in-item build-in-scale-right" style="transition-delay: 1600ms;">
-                      <div class="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" style="background: rgba(235, 245, 255, 0.2);"> Front-end Dev </div>
-                      <div class="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6" style="background: rgba(235, 245, 255, 0.2);">
+                      <div class="pt-2 pb-1 px-4 rounded-top-2 d-inline-block text-medium" style="background: rgba(135, 135, 135, 0.2);"> Front-end Dev </div>
+                      <div class="p-4 rounded-bottom-2 rounded-right-2 box-shadow-mktg-xl mb-6" style="background: rgba(135, 135, 135, 0.2);">
                         <ul class="list-style-none mb-n4">
                           <li class="mb-4 f4-mktg d-flex flex-items-center flex-justify-between js-build-in-item build-in-scale-fade" style="transition-delay: 1800ms;">
                             <div class="d-flex flex-items-center">
@@ -1937,5 +1939,6 @@
     <div id="js-global-screen-reader-notice" class="sr-only" aria-live="polite" aria-atomic="true"></div>
     <div id="js-global-screen-reader-notice-assertive" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
     <script type="module" src="firebaseauth.js"></script>
+    <script src="lib/js/switch.js"></script>
   </body>
 </html>
