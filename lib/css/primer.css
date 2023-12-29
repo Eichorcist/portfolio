@@ -4541,7 +4541,7 @@
   .color-fg-subtle {
     color: var(--fgColor-muted, var(--color-fg-subtle)) !important;
   }
-  .color-fg-accent {
+  .color-fg-accent 
     color: var(--fgColor-accent, var(--color-accent-fg)) !important;
   }
   .color-fg-success {
